@@ -2,6 +2,6 @@
 """Type Annotated function return float."""
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """Return floor of n."""
     return int(n)
