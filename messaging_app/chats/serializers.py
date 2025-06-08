@@ -22,7 +22,7 @@ class ConversationSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     # Example of SerializerMethodField
     full_name = serializers.SerializerMethodField()
-
+    phone_number = serializers.CharField(max_length=15)
     class Meta:
         model = User
         fields = ['id', 'username', 'phone_number', 'full_name']  # Adjust fields as per your model
