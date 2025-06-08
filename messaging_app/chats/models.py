@@ -7,7 +7,7 @@ class User(AbstractUser):
     # Use UUID as primary key if you want:
     user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
-
+    password = models.CharField(max_length=128)
     # Email is already in AbstractUser, but you can enforce uniqueness here if needed
     email = models.EmailField(unique=True)
 
